@@ -44,7 +44,8 @@ Base Layout
   margin: 1.3em 0;
 
 }
-.main-nav a{
+.main-nav a,
+.footer-nav a{
   display: block;
   padding: 10px 15px;
   list-style: none;
@@ -117,34 +118,49 @@ Base Layout
   margin: 1.5em 1em;
   font-weight: bold;
 }
-
 .foot-name{
   float:left;
   padding-left: 20px;
 
 }
 
-.foot-link {
+.foot-link,
+.footer-nav{
   width:auto;
   float:right;
   padding-right: 20px;
   color: black;
 }
-
+.footer-nav{
+  width:auto;
+  float:right;
+  padding-right: 20px;
+  /* margin: 1.5em 1em; */
+  color: black;
+}
 
 
 /* =====================
 Media Queries
 ===================== */
-/* apply style when viewport is 769px or wider */
- @media (min-width: 769px){
+/* If [device width] is less than or equal to 767px, then do {...}*/
+
+@media (max-width:767px){
+  .footer-nav{
+    display:none;
+  }
+}
+
+/* If [device width] is greater than or equal to 768px, then do {...} */
+ @media (min-width: 768px){
    .head{
      width:100%;
      margin:0;
      justify-content: center;
      margin-bottom: 2em;
    }
-   .main-nav li{
+   .main-nav li,
+   .footer-nav li{
      display: inline-block;
      background-color: #FAF7F7;
 
@@ -152,8 +168,6 @@ Media Queries
    .container{
      display: inline-block;
      margin-bottom: 2em;
-
-
    }
    .avatar{
      float:right;
@@ -167,7 +181,6 @@ Media Queries
    }
    .card{
      display: inline-block;
-
    }
 
    .marketing,
@@ -177,9 +190,6 @@ Media Queries
      float:left;
      margin-left: 1em;
      margin-bottom: 1em;
-
-
-
    }
    .search,
    .map,
@@ -188,12 +198,26 @@ Media Queries
      float: right;
      margin-right: 1em;
      margin-bottom: 1em;
-
    }
+   .foot-link{
+     display: none;
+   }
+   /* .footer-nav{
+     width:auto;
+     float:right;
+     padding-right: 20px;
+     margin: 1.5em 1em;
+     color: black;
+
+   } */
 
 }
 .clear-fix:after {
     content: "";
     display: table;
     clear: both;
+}
+
+@@media (min-width 1024px) {
+
 }
