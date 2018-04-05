@@ -13,7 +13,7 @@
   <body>
 
       <header class="main-header">
-        <div class="container">
+        <div class="container head">
           <h1 id="top">Student Name</h1>
             <ul class="main-nav">
               <li><a class="nav-link" href="#top">Home</a></li>
@@ -26,42 +26,44 @@
 
         <div class="container">
         <img class="avatar" src="images/responsive-layout-profile.png" alt="Avatar of Student">
-          <p>Hi! I'm a front-end developer who loves responsive design and css. I recently finished a degree in front-end web development at Treehouse and am excited to put all my skills to use!</p>
+          <p class="container-p">Hi! I'm a front-end developer who loves responsive design and css. I recently finished a degree in front-end web development at Treehouse and am excited to put all my skills to use!</p>
        </div> <!-- /.container-->
 
 <!--div/card class envelops main text about projects into one big section. nested divs allow us to stlye css responsivley-->
-        <div class="card">
+        <div class="card clear-fix">
             <h2 id="middle">Portfolio</h2>
-          <!-- <div class="marketing" -->
+          
+          <div class="marketing">
             <img class="images" src="images/portfolio-1.png" alt="Image of portfolio layout">
             <h3>Marketing Page</h3>
               <p>This project shows the front page of a marketing website meant for a specific business I'm interested in.</p>
-          <!-- </div> -->
-          <!-- <div class="search"> -->
+          </div>
+           <div class="search">
             <img class="images" src="images/portfolio-2.png" alt="Image of Search Page layout">
             <h3>Search Page</h3>
               <p>This project searches through a specific database to find information that the user is trying to look up.</p>
-          <!-- </div>
-          <div class="travel"> -->
+         </div>
+          <div class="travel">
             <img class="images" src="images/portfolio-3.png" alt="Image of Travel App layout">
             <h3>Travel App</h3>
             <p>This project compares travel times based on different transportation methonds and tells you the best one.</p>
-          <!-- </div>
-          <div class="map"> -->
+          </div>
+          <div class="map">
             <img class="images" src="images/portfolio-4.png" alt="Image of Map layout">
             <h3>Map of Favorite Spots</h3>
             <p>This project uses mapping apis to plot points for my favorite spots in the city for a do-it-yourself walking tour.</p>
-          <!-- </div>
-          <div class="photo"> -->
+          </div>
+          <div class="photo">
             <img class="images" src="images/portfolio-5.png" alt="Image of photo gallery layout">
             <h3>Photo Gallery</h3>
             <p>This project shows pictures from a recent trip to the viewer and allows them to easily navigate through the photos.</p>
-          <!-- </div>
-          <div class="calc"> -->
+          </div>
+          <div class="calc">
             <img class="images" src="images/portfolio-6.png" alt="Image of calculator layout">
             <h3>Calculator</h3>
             <p>Someone can enter in the numbers they want, and press the big blue button and get the results.</p>
-          <!-- </div> -->
+          </div>
+        <!-- </div> end of clear-fix -->
         </div> <!--end of card div/project info-->
       <div class="contact">
         <h2 id="bottom">Contact</h2>
