@@ -131,13 +131,13 @@ Base Layout
   padding-right: 20px;
   color: black;
 }
-.footer-nav{
+/* .footer-nav{
   width:auto;
   float:right;
   padding-right: 20px;
-  /* margin: 1.5em 1em; */
-  color: black;
-}
+  /* margin: 1.5em 1em;
+   color: black;
+} */
 
 
 /* =====================
@@ -184,40 +184,124 @@ Media Queries
    }
 
    .marketing,
-   .travel,
-   .photo{
+   .search,
+   .travel{
      width: 45%;
      float:left;
+
      margin-left: 1em;
      margin-bottom: 1em;
    }
-   .search,
+
    .map,
+   .photo,
    .calc{
      width: 45%;
      float: right;
+
      margin-right: 1em;
      margin-bottom: 1em;
    }
    .foot-link{
      display: none;
    }
-   /* .footer-nav{
-     width:auto;
-     float:right;
-     padding-right: 20px;
-     margin: 1.5em 1em;
-     color: black;
-
-   } */
 
 }
+
+
+@media (min-width: 1025px) {
+  .html{
+    font-size: 1.313em;
+
+  }
+  .head{
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .container{
+    display: inline-block;
+    margin:0 2em;
+  }
+  .card{
+    clear: both;
+  }
+  /* .main-header{
+    margin-bottom: 2em;
+  } */
+
+  #top{
+    float:left;
+
+  }
+  /*
+note: when floating ul right, li will list backwards
+  .main-nav ul,
+  .footer-nav ul{
+    float: right;
+  } */
+  .main-nav li,
+  .footer-nav li{
+    float: right;
+}
+
+  .main-nav{
+    margin: 1.6em 2em 0 0;
+  }
+  .avatar{
+    width:40%;
+    margin: 0 0 2em 2em;
+  }
+  .container-p{
+    width:50%;
+  }
+
+/* --- Floating the Portfolio---*/
+
+  /* --the first attempt was to replicate the mockup exactly, the selector sequence actually switched the layout.
+
+  this second attempt was to select in order and float based on position.  is that it fits perfect at one screen width however, as you scale, the line-up of the photos starts to skew--
+
+  .marketing,
+  .map{
+
+    float:left;
+    width: 30%;
+    height:auto;
+    margin: 0 auto;
+
+  }
+  .search,
+  .photo{
+
+    float: center;
+    width: 30%;
+    height:auto;
+    margin: 0 auto;
+  }
+  .travel,
+  .calc{
+    width: 30%;
+    height:auto;
+    float:right;
+    margin: 0 auto;
+  } */
+
+
+/* Here I followed Dave's "column layout with meida queries" but I still have no idea what I'm doing.*/
+  .card{
+    width 90%;
+    max-width: 1150px;
+  }
+  .card-info{
+    width:33%;
+    margin: auto;
+		min-height: 450px;
+  }
+}
+
+/*----- clear-fix -----*/
 .clear-fix:after {
     content: "";
     display: table;
     clear: both;
-}
-
-@@media (min-width 1024px) {
-
 }
