@@ -289,7 +289,7 @@ note: when floating ul right, li will list backwards
 
 /* Here I followed Dave's "column layout with meida queries" but I still have no idea what I'm doing.*/
   .card{
-    width 90%;
+    width: 90%;
     max-width: 1150px;
   }
   .card-info{
