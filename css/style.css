@@ -7,11 +7,12 @@ Base Styles
   box-sizing: border-box;
 }
 
-html {
+body {
   background-color: #FAF7F7;
   font-family: 'Roboto', sans-serif;
   font-size: 1.125em;
   line-height:150%;
+  text-align: center;
 }
 /* to prevent collapsing margins set top margin to 0 */
 h1 {
@@ -32,6 +33,9 @@ a {
 .main-nav a.nav-link:hover{
   background-color: silver;
 }
+img{
+  width:100%;
+}
 
 
 /* =====================
@@ -42,8 +46,8 @@ Base Layout
 
 #top{
   margin: 1.3em 0;
-
 }
+
 .main-nav a,
 .footer-nav a{
   display: block;
@@ -54,17 +58,12 @@ Base Layout
   font-weight: bold;
 }
 
-
-
-
 /* ---- Layout Containers ---- */
-
 
 .container{
   display: block;
-  text-align: center;
+  width: 100%;
   margin: 1em 0;
-
 }
 
 #middle,
@@ -82,24 +81,21 @@ Base Layout
   margin-top: 2em;
 }
 
-.images{
- width: 100%;
-  height: auto;
-}
-
 .card {
+  width: 100%;
   margin: 1em 1em 0;
   padding: 1em;
   background-color: white;
 }
 
-.card,
-.contact{
-  text-align: center;
-}
+
 .container,
 .contact{
   margin: 0 2em;
+}
+
+.box{
+
 }
 
 .contact{
@@ -128,16 +124,10 @@ Base Layout
 .footer-nav{
   width:auto;
   float:right;
-  padding-right: 20px;
+  /* padding-right: 20px; */
   color: black;
 }
-/* .footer-nav{
-  width:auto;
-  float:right;
-  padding-right: 20px;
-  /* margin: 1.5em 1em;
-   color: black;
-} */
+
 
 
 /* =====================
@@ -153,7 +143,7 @@ Media Queries
 
 /* If [device width] is greater than or equal to 768px, then do {...} */
  @media (min-width: 768px){
-   .head{
+   .main-header{
      width:100%;
      margin:0;
      justify-content: center;
@@ -165,69 +155,73 @@ Media Queries
      background-color: #FAF7F7;
 
    }
-   .container{
+   .container,
+   .card{
      display: inline-block;
-     margin-bottom: 2em;
+
    }
    .avatar{
      float:right;
-     margin-left: 5px;
-     margin-top: 0;
+     margin: 0 10px;
+     width: 50%;
    }
    .container-p{
 
      text-align: left;
-     margin: 0;
+     margin-top: 2em;
    }
-   .card{
-     display: inline-block;
+   .box{
+     float: left;
+     width: 50%;
    }
+   .box:nth-of-type(odd) {
+    padding-right: 15px;
+  }
 
-   .marketing,
-   .search,
-   .travel{
-     width: 45%;
-     float:left;
+  .box:nth-of-type(even) {
+    padding-right: 15px;
+  }
+  .main-footer{
+    width: 100%;
+  }
+  .foot-link{
+    display: none;
+  }
 
-     margin-left: 1em;
-     margin-bottom: 1em;
-   }
+  /* .foot-name{
+    float:left;
+  } already established above?*/
+  .footer-nav{
+    float:right;
+    margin: 1.5em 1em;
+  }
 
-   .map,
-   .photo,
-   .calc{
-     width: 45%;
-     float: right;
-
-     margin-right: 1em;
-     margin-bottom: 1em;
-   }
-   .foot-link{
-     display: none;
-   }
 
 }
 
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   .html{
     font-size: 1.313em;
 
   }
-  .head{
+  .main-header{
     margin-bottom: 0;
     margin-left: 0;
   }
   .container{
     display: inline-block;
     margin:0 2em;
+    width: 100%;
+    max-width: 1150px;
   }
   .card{
     clear: both;
   }
-  /* .main-header{
-    margin-bottom: 2em;
-  } */
+  .box{
+    width: 33%;
+  }
+
 
   #top{
     float:left;
@@ -240,63 +234,31 @@ note: when floating ul right, li will list backwards
     float: right;
   } */
   .main-nav li,
-  .footer-nav li{
+/* .footer-nav li */{
     float: right;
 }
 
   .main-nav{
     margin: 1.6em 2em 0 0;
+    float:right;
   }
   .avatar{
     width:40%;
-    margin: 0 0 2em 2em;
+    margin: 0 2em 2em 0;
   }
   .container-p{
     width:50%;
   }
 
-/* --- Floating the Portfolio---*/
-
-  /* --the first attempt was to replicate the mockup exactly, the selector sequence actually switched the layout.
-
-  this second attempt was to select in order and float based on position.  is that it fits perfect at one screen width however, as you scale, the line-up of the photos starts to skew--
-
-  .marketing,
-  .map{
-
-    float:left;
-    width: 30%;
-    height:auto;
-    margin: 0 auto;
-
-  }
-  .search,
-  .photo{
-
-    float: center;
-    width: 30%;
-    height:auto;
-    margin: 0 auto;
-  }
-  .travel,
-  .calc{
-    width: 30%;
-    height:auto;
-    float:right;
-    margin: 0 auto;
-  } */
-
-
-/* Here I followed Dave's "column layout with meida queries" but I still have no idea what I'm doing.*/
-  .card{
-    width: 90%;
+  .main-footer{
     max-width: 1150px;
   }
-  .card-info{
-    width:33%;
-    margin: auto;
-		min-height: 450px;
+
+  .card{
+    width: 100%;
+    max-width: 1250px;
   }
+
 }
 
 /*----- clear-fix -----*/
