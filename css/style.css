@@ -13,12 +13,15 @@ body {
   font-size: 1.125em;
   line-height:150%;
   text-align: center;
+  padding: 25px;
 }
 /* to prevent collapsing margins set top margin to 0 */
 h1 {
   margin:0;
+  font-family: 'Poppins', sans-serif;
 }
 h2 {
+  font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   font-size: 1.125em;
 }
@@ -31,10 +34,15 @@ a {
 }
 /* hover color only on nav menu */
 .main-nav a.nav-link:hover{
-  background-color: silver;
+  background-color: gray;
 }
+
+
 img{
   width:100%;
+}
+.foot-name{
+  font-family: 'Poppins', sans-serif;
 }
 
 
@@ -63,27 +71,29 @@ Base Layout
 .container{
   display: block;
   width: 100%;
-  margin: 1em 0;
+  padding: 1em 0;
 }
 
-#middle,
-#bottom{
+#middle{
   padding: 1em 0 2em;
 }
-
+,
+#bottom{
+  padding: 0 0 2em;
+}
 .main-nav li{
   background-color: white;
   margin: .5em 1em;
 }
 .avatar{
-  max-width: 70%;
+  max-width: 50%;
   height: auto;
   margin-top: 2em;
 }
 
 .card {
   width: 100%;
-  margin: 1em 1em 0;
+  margin: 1em 0 0;
   padding: 1em;
   background-color: white;
 }
@@ -91,16 +101,18 @@ Base Layout
 
 .container,
 .contact{
-  margin: 0 2em;
+  padding: 0 2em;
 }
 
 .box{
 
 }
-
+.experience{
+  padding: 2.5em 0 2.5em;
+}
 .contact{
   display: block;
-  padding: 2.5em 0 3.5em;
+  padding: 0 0 3.5em;
   border-bottom: solid 1px #737171;
 }
 .phone{
@@ -111,13 +123,14 @@ Base Layout
 .foot-name,
 .foot-link{
   display: inline-block;
-  margin: 1.5em 1em;
   font-weight: bold;
 }
 .foot-name{
   float:left;
-  padding-left: 20px;
-
+  margin: 1.5em 0 1.5em 1em;
+}
+.foot-link{
+  margin: 1.5em 1em 1.5em 0;
 }
 
 .foot-link,
@@ -163,7 +176,8 @@ Media Queries
    .avatar{
      float:right;
      margin: 0 10px;
-     width: 50%;
+     max-width: 30%;
+     height:auto;
    }
    .container-p{
 
@@ -221,7 +235,11 @@ Media Queries
   .box{
     width: 33%;
   }
-
+  .contact-p{
+    width:80%;
+    display: inline-block;
+    padding: 0 50px 50px;
+  }
 
   #top{
     float:left;

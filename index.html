@@ -8,24 +8,28 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
   </head>
   <!--establish header and nav bar-->
   <body>
 
       <header class="main-header">
         <div class="container">
-          <h1 id="top">Student Name</h1>
-            <ul class="main-nav">
-              <li><a class="nav-link" href="#top">Home</a></li>
-              <li><a class="nav-link" href="#middle">Portfolio</a></li>
-              <li><a class="nav-link" href="#bottom">Contact</a></li>
-            </ul>
+          <h1 id="top">Amber Wells</h1>
+            <nav>
+              <ul class="main-nav">
+                <li><a class="nav-link" href="#top">Home</a></li>
+                <li><a class="nav-link" href="#middle">Portfolio</a></li>
+                <li><a class="nav-link" href="#new">New</a></li>
+                <li><a class="nav-link" href="#bottom">Contact</a></li>
+              </ul>
+            </nav>
         </div>
       </header>
 <!--begins main text of webpage-->
 
         <div class="container">
-        <img class="avatar" src="images/responsive-layout-profile.png" alt="Avatar of Student">
+        <img class="avatar" src="images/avatarme.png" alt="Avatar of Amber">
           <p class="container-p">Hi! I'm a front-end developer who loves responsive design and css. I recently finished a degree in front-end web development at Treehouse and am excited to put all my skills to use!</p>
        </div> <!-- /.container-->
 
@@ -49,7 +53,7 @@
           <div class="box">
             <img src="images/portfolio-3.png" alt="Image of Travel App layout">
             <h3>Travel App</h3>
-            <p>This project compares travel times based on different transportation methonds and tells you the best one.</p>
+            <p>This project compares travel times based on different transportation methods and tells you the best one.</p>
           </div>
 
           <div class="box">
@@ -71,9 +75,14 @@
           </div> <!--end of class="box" -->
       </main>
 
+        <div class="experience">
+          <h2 id="new">Related Experience</h2>
+            <p class="contact-p"> Wouldn't you like to know more about my related experience? Blee, bla, blu.
+        </div>
+
         <div class="contact clear-fix">
           <h2 id="bottom">Contact</h2>
-            <p> If you're interested in chatting or want more information about what I've been working on, I'd love to hear from you!</p>
+            <p class="contact-p"> If you're interested in chatting or want more information about what I've been working on, I'd love to hear from you!</p>
             <span class="phone">Phone  <strong>+1 (111) 555-1234</strong></span>
             <span>Email  <strong>email@yoursite.com</strong></span>
         </div> <!-- end class="contact"   -->
@@ -81,17 +90,17 @@
 
 <!--footer info adjust according to media size-->
     <footer class="main-footer clear-fix">
-      <p class="foot-name ">Student name</p>
+      <p class="foot-name ">Amber Wells</p>
       <!-- only for small screen sizes -->
       <a class="foot-link" href="#top">BACK TO TOP</a>
 
-    <div><!-- medium screen and up -->
-      <ul class="footer-nav">
+    <nav class="footer-nav"><!-- medium screen and up -->
+      <ul >
         <li><a class="nav-link" href="#top">Home</a></li>
         <li><a class="nav-link" href="#middle">Portfolio</a></li>
         <li><a class="nav-link" href="#bottom">Contact</a></li>
       </ul>
-    </div>
+    </nav>
     </footer>
 </body>
 </html>
