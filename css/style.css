@@ -77,7 +77,7 @@ Base Layout
 #middle{
   padding: 1em 0 2em;
 }
-,
+
 #bottom{
   padding: 0 0 2em;
 }
@@ -251,7 +251,7 @@ note: when floating ul right, li will list backwards
   .footer-nav ul{
     float: right;
   } */
-  .main-nav li,
+  .main-nav li
 /* .footer-nav li */{
     float: right;
 }
