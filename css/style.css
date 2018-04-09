@@ -137,18 +137,16 @@ Base Layout
   color: black;
 }
 
-
+.foot-link {
+ display: inline;
+}
+.footer-nav li{
+ display: none;
+}
 
 /* =====================
 Media Queries
 ===================== */
-/* If [device width] is less than or equal to 767px, then do {...}*/
-
-@media (max-width:767px){
-  .footer-nav{
-    display:none;
-  }
-}
 
 /* If [device width] is greater than or equal to 768px, then do {...} */
  @media (min-width: 768px){
